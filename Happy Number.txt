@@ -1,0 +1,30 @@
+class Solution {
+    public boolean isHappy(int n) {
+    Set<Integer> set=new HashSet<>();
+       while(!set.contains(n))
+        {
+            set.add(n);
+            n=SquareOf(n);
+            if(n==1)
+            {
+                return true;
+            }
+            
+           
+        }
+       return false;
+        
+    }
+    public static int SquareOf(int n)
+    {
+        int a;
+        int sum=0;
+        while(n>0)
+        {
+            a=n%10;
+            sum+=(a*a);
+            n=n/10;
+        }
+        return sum;
+    }
+}
