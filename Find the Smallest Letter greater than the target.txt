@@ -1,0 +1,14 @@
+class Solution {
+    public char nextGreatestLetter(char[] letters, char target) {
+        int n=letters.length;
+        for(char i=0;i<n;i++)
+        {
+            if((target-97)<(letters[i]-97))
+            {
+                return letters[i];
+            }
+        }
+        
+        return letters[0];
+    }
+}
