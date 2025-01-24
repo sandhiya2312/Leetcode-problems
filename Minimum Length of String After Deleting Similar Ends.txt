@@ -1,0 +1,21 @@
+class Solution {
+    public int minimumLength(String s) {
+        int i=0,j=s.length()-1;
+       
+        while(i<j && s.charAt(i)==s.charAt(j))
+        {
+               char x=s.charAt(i);
+               while(i<=j && s.charAt(i)==x )
+               {
+                i++;
+               }
+               while( j>=i && s.charAt(j)==x)
+               {
+                j--;
+               }
+            
+         }
+       
+        return j-i+1;
+    }
+}
